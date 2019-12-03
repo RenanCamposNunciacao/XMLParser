@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "8acb1c47-50b4-4898-b0b6-eb9ac63d7621",
+		"name": "InputDocumentAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Successful Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "807362be-b6fc-4394-b9c7-96edd0e14b4e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputDocument>\r\n    <DeclarationList>\r\n        <Declaration Command=\"DEFAULT\" Version=\"5.13\">\r\n            <DeclarationHeader>\r\n                <Jurisdiction>IE</Jurisdiction>\r\n                <CWProcedure>IMPORT</CWProcedure>\r\n                            <DeclarationDestination>CUSTOMSWAREIE</DeclarationDestination>\r\n                <DocumentRef>71Q0019681</DocumentRef>\r\n                <SiteID>DUB</SiteID>\r\n                <AccountCode>G0779837</AccountCode>\r\n            </DeclarationHeader>\r\n        </Declaration>\r\n    </DeclarationList>\r\n</InputDocument>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/XMLWebAPI",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"XMLWebAPI"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Command Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "807362be-b6fc-4394-b9c7-96edd0e14b4e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputDocument>\r\n    <DeclarationList>\r\n        <Declaration Command=\"DEFAUL\" Version=\"5.13\">\r\n            <DeclarationHeader>\r\n                <Jurisdiction>IE</Jurisdiction>\r\n                <CWProcedure>IMPORT</CWProcedure>\r\n                            <DeclarationDestination>CUSTOMSWAREIE</DeclarationDestination>\r\n                <DocumentRef>71Q0019681</DocumentRef>\r\n                <SiteID>DUB</SiteID>\r\n                <AccountCode>G0779837</AccountCode>\r\n            </DeclarationHeader>\r\n        </Declaration>\r\n    </DeclarationList>\r\n</InputDocument>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/XMLWebAPI",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"XMLWebAPI"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Site Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "807362be-b6fc-4394-b9c7-96edd0e14b4e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputDocument>\r\n    <DeclarationList>\r\n        <Declaration Command=\"DEFAULT\" Version=\"5.13\">\r\n            <DeclarationHeader>\r\n                <Jurisdiction>IE</Jurisdiction>\r\n                <CWProcedure>IMPORT</CWProcedure>\r\n                            <DeclarationDestination>CUSTOMSWAREIE</DeclarationDestination>\r\n                <DocumentRef>71Q0019681</DocumentRef>\r\n                <SiteID>DU</SiteID>\r\n                <AccountCode>G0779837</AccountCode>\r\n            </DeclarationHeader>\r\n        </Declaration>\r\n    </DeclarationList>\r\n</InputDocument>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/XMLWebAPI",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"XMLWebAPI"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
